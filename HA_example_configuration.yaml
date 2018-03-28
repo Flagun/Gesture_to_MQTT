@@ -1,0 +1,6 @@
+sensor:
+  - platform: mqtt  
+    state_topic: "gesture/sensornode1"  
+    name: "Gesture"  
+    value_template: '{{ value_json.gesture }}' 
+    
