@@ -1,0 +1,17 @@
+- alias: Turn salon on - gesture right
+  trigger:
+    platform: state
+    entity_id: sensor.gesture
+    to: "right"
+  action:
+    service: homeassistant.turn_on
+    entity_id: light.salon
+
+- alias: Turn salon off - gesture left
+  trigger:
+    platform: state
+    entity_id: sensor.gesture
+    to: "left"
+  action:
+    service: homeassistant.turn_off
+    entity_id: light.salon
